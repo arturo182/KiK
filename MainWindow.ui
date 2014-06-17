@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>405</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Kółko i Krzyżyk</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/ttt.ico</normaloff>:/ttt.ico</iconset>
+  </property>
+  <widget class="Canvas" name="canvas"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>405</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuGra">
+    <property name="title">
+     <string>Gra</string>
+    </property>
+    <addaction name="actionNowa"/>
+    <addaction name="separator"/>
+    <addaction name="actionWyjd"/>
+   </widget>
+   <widget class="QMenu" name="menuPomoc">
+    <property name="title">
+     <string>Pomoc</string>
+    </property>
+    <addaction name="actionO"/>
+   </widget>
+   <addaction name="menuGra"/>
+   <addaction name="menuPomoc"/>
+  </widget>
+  <action name="actionO">
+   <property name="text">
+    <string>O...</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionNowa">
+   <property name="text">
+    <string>Nowa</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionWyjd">
+   <property name="text">
+    <string>Wyjdź</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="action_atwo">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Łatwo</string>
+   </property>
+  </action>
+  <action name="action_rednio">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Średnio</string>
+   </property>
+  </action>
+  <action name="actionTrudno">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Trudno</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Canvas</class>
+   <extends>QWidget</extends>
+   <header>Canvas.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
